@@ -30,13 +30,13 @@ public class FruitController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Void> deleteFruit(@PathVariable int id) {
+    public ResponseEntity<Void> deleteFruit(@PathVariable String id) {
         fruitService.deleteFruit(id);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/getOne/{id}")
-    public ResponseEntity<Fruit> getOne(@PathVariable int id) {
+    public ResponseEntity<Fruit> getOne(@PathVariable String id) {
         return ResponseEntity.ok(fruitService.getFruitById(id));
     }
 

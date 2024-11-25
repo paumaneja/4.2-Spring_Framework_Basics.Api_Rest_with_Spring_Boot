@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 public class Fruit {
 
     @Id
-    private int id;
+    private String id;
 
     @Field(name = "name")
     private String name;

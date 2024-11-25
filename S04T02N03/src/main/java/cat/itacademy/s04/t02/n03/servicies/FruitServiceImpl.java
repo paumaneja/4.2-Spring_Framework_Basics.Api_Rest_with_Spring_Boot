@@ -33,14 +33,14 @@ public class FruitServiceImpl implements FruitService{
     }
 
     @Override
-    public void deleteFruit(int id) {
+    public void deleteFruit(String id) {
         fruitRepository.findById(id)
                 .orElseThrow(() -> new FruitNotFoundException("Fruit whit id " + id + " not found."));
         fruitRepository.deleteById(id);
     }
 
     @Override
-    public Fruit getFruitById(int id) {
+    public Fruit getFruitById(String id) {
         return fruitRepository.findById(id)
                 .orElseThrow(() -> new FruitNotFoundException("Fruit whit id " + id + " not found."));
     }

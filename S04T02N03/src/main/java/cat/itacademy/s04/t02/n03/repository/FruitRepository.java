@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface FruitRepository extends MongoRepository<Fruit, Integer> {
+public interface FruitRepository extends MongoRepository<Fruit, String> {
     boolean existsByName(String name);
     Optional<Fruit> findByName(String name);
 }
